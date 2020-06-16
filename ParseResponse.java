@@ -43,7 +43,7 @@ public class ParseResponse {
                 System.out.println("RECEIVED " + answerRR + " ANSWER(S), DNS QUERY RESULTS:");
                 System.out.println(host + ": ");
                 for (int i = response.length - 1; i > 0; i--) { //Finds RDATA bytes by finding last non-zero byte
-                    if (response[i] != 0) {                     //because I couldn't find RDATALENGTH byte.
+                    if (response[i] != 0) {                     
                         for (int j = 0; j < answerRR; j++) {
                             ipv4 = ByteBuffer.allocate(4);
                             for (int k = i - 3; k <= i; k++) {
